@@ -14,9 +14,11 @@ public class t_Main
 {
 	public static void main(String args[])
 	{
+		//	Variables in the scope of main()
 		int choice = -1, subj;
 		boolean end = false;
-		//Calling each of the the Chapter classes
+		
+		//	Calling each of the the Chapter classes
 		t_CH1 A = new t_CH1();
 		t_CH2 B = new t_CH2();
 		t_CH3 C = new t_CH3();
@@ -33,13 +35,13 @@ public class t_Main
 			//	statements that prompt the user to chose a method, or 'lesson'.
 			switch(choice)
 			{
-			case 0:
+				case 0:
 				{
 					System.out.print("\nGoodbye!");
 					end = true;
 					break;
 				}
-			case 1:
+				case 1:
 				{
 					subj = 0;
 					System.out.println("\nWhich subject would you like to run?");
@@ -51,24 +53,24 @@ public class t_Main
 					
 					switch(subj)
 					{
-					case 0:
+						case 0:
 						{
 							choice = -1;
 							break;
 						}
-					case 1:
+						case 1:
 						{
 							System.out.println("\nRunning A.output() method from t_CH1 class...\n");
 							A.output();
 							break;
 						}
-					case 2:
+						case 2:
 						{
 							System.out.println("\nRunning A.inputTest() method from t_CH1 class...\n");
 							A.inputTest();
 							break;
 						}
-					default:
+						default:
 						{
 							System.out.println("\nIncorrect input; closing program.");
 							break;
@@ -76,7 +78,7 @@ public class t_Main
 					}
 					break;
 				}
-			case 2:
+				case 2:
 				{
 					subj = 0;
 					System.out.println("\nWhich subject would you like to run?");
@@ -88,24 +90,24 @@ public class t_Main
 					
 					switch(subj)
 					{
-					case 0:
+						case 0:
 						{
 							choice = -1;
 							break;
 						}
-					case 1:
+						case 1:
 						{
 							System.out.println("\nRunning B.math() method from t_CH2 class...\n");
 							B.math();
 							break;
 						}
-					case 2:
+						case 2:
 						{
 							System.out.println("\nRunning B.ifStatement() method from t_CH2 class...\n");
 							B.ifStatement();
 							break;
 						}
-					default:
+						default:
 						{
 							System.out.println("\nIncorrect input; closing program.");
 							break;
@@ -113,7 +115,7 @@ public class t_Main
 					}
 					break;
 				}
-			case 3:
+				case 3:
 				{
 					subj = 0;
 					System.out.println("\nWhich subject would you like to run?");
@@ -127,36 +129,36 @@ public class t_Main
 					
 					switch(subj)
 					{
-					case 0:
+						case 0:
 						{
 							choice = -1;
 							break;
 						}
-					case 1:
+						case 1:
 						{
 							System.out.println("\nRunning C.switchStatement() method from t_CH3 class...\n");
 							C.switchStatement();
 							break;
 						}
-					case 2:
+						case 2:
 						{
 							System.out.println("\nRunning C.whileLoop() method from t_CH3 class...\n");
 							C.whileLoop();
 							break;
 						}
-					case 3:
+						case 3:
 						{
 							System.out.println("\nRunning C.forLoop() method from t_CH3 class...\n");
 							C.forLoop();
 							break;
 						}
-					case 4:
+						case 4:
 						{
 							System.out.println("\nRunning C.doWhileLoop() method from t_CH3 class...\n");
 							C.doWhileLoop();
 							break;
 						}
-					default:
+						default:
 						{
 							System.out.println("\nIncorrect input; closing program.");
 							break;
@@ -164,7 +166,7 @@ public class t_Main
 					}
 					break;
 				}
-			case -1:
+				case -1:
 				{
 					System.out.println("\nWhich Chapter would you like to run?");
 					System.out.println("Currently available: CH1 - CH3");
@@ -172,7 +174,7 @@ public class t_Main
 					choice = in.nextInt();
 					break;
 				}
-			default:
+				default:
 				{
 					//		Throws an error message to the user then prompts them again
 					//	to chose a chapter.  This will keep the WHILE loop running

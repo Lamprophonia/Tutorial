@@ -1,6 +1,6 @@
 /*
  * Chapter 3:
- * 		More statements, loops
+ * 		More statements (SWITCH), loops (WHILE, FOR, DO WHILE)
  * 
  * 		NOTES:
  * 			For the sake of time, we will simply assign values to any variable and not
@@ -41,59 +41,59 @@ public class t_CH3
 		//	the brackets AROUND the cases ARE necessary.
 		switch(choice)
 		{
-		case 1:
+			case 1:
 			{
 				System.out.println("A");
 				break;
 			}
-		case 2:
+			case 2:
 			{
 				System.out.println("B");
 				break;
 			}
-		case 3:
+			case 3:
 			{
 				System.out.println("C");
 				break;
 			}
-		case 4:
+			case 4:
 			{
 				System.out.println("D");
 				break;
 			}
-		case 5:
+			case 5:
 			{
 				System.out.println("E");
 				break;
 			}
-		case 6:
+			case 6:
 			{
 				System.out.println("F");
 				break;
 			}
-		case 7:
+			case 7:
 			{
 				System.out.println("G");
 				break;
 			}
-		case 8:
+			case 8:
 			{
 				System.out.println("H");
 				break;
 			}
-		case 9:
+			case 9:
 			{
 				System.out.println("I");
 				break;
 			}
-		case 10:
+			case 10:
 			{
 				System.out.println("J");
 				break;
 			}
-		//	DEFAULT should be added to the end of every switch statement.  It will
-		//	run if none of the other cases are met.  Think of this as a catch-all.
-		default:
+			//	DEFAULT should be added to the end of every switch statement.  It will
+			//	run if none of the other cases are met.  Think of this as a catch-all.
+			default:
 			{
 				System.out.println("Wrong number!");
 				break;
@@ -170,22 +170,109 @@ public class t_CH3
 	
 	public void forLoop()
 	{
+		//	Variables in the function scope (can be used by everything within the function)
+		int i, j = 0, k = 10;
+		
 		/*
 		 * 					***************
 		 * 					***FOR LOOPS***
 		 * 					***************
+		 * 			FOR loops may appear confusing at first, but you will use
+		 * 		them so often that you will come to understand them intimately.
+		 * 		FOR loops are designed to use iteration, and run through from one
+		 * 		number to another rather than wait for a specific condition to
+		 * 		change.  It takes three factors, each separated by a semicolon
+		 * 		(;).  The first is the value to be iterated (typically an int
+		 * 		declared specifically for this purpose), the second is the condition
+		 * 		that must be met for the loop to continue (typically measuring the
+		 * 		iteration variable against something), and the third is the iteration
+		 * 		itself (most common simply ++ or --, but it's possible to have it
+		 * 		increment at a variable rate, such as a Fibonacci number).
+		 * 			FOR loops are VERY important.  They can be very complex, or very
+		 * 		simple.  We will only cover the easier to grasp aspects of FOR loops
+		 * 		for now, but we will cover the rest in a later chapter.
 		 */
 		
+		//		This is the most common syntax of a FOR loop.  Note that the variable
+		//	i had been declared previously, but not given any value.
+		for(i = 0; i < k; i++)
+		{
+			System.out.printf("Iteration %d:\n", i);
+		}
 		
+		//		The iteration variable can also be declared within the loop, as seen
+		//	here.  This is also an example of a FOR loop counting down, instead of up.
+		//	It is important to note that the variable x has no scope outside of this
+		//	loop, which means it no longer exists once the loop is finished.  In the
+		//	previous example, the variable i could be used outside of the FOR loop after
+		//	it had been iterated by it.
+		for(int x = 10; x > j; x--)
+		{
+			System.out.printf("Iteration %d:\n", x);
+		}
+		
+		//		It can also be declared and initialized elsewhere, as j was above.
+		//	Note that we simply leave the initialization step blank, but will still
+		//	need to include the semicolon.
+		//		Here we will also showcase some of the more complex things that can
+		//	be done regarding the iteration variables.
+		for(; j < k; j += 2)
+		{
+			k++;
+			System.out.printf("j = %d, k = %d\n", j, k);
+			//		When run, check the output and note that this loop ran through
+			//	the same number of iterations, but the value of the two variables
+			//	underwent quite different changes.
+		}
+		
+		//	To show that the changes are permanent to the variable, we'll print them.
+		System.out.printf("\ni = %d, j = %d, k = %d\n", i, j, k);
+		//		Note that we cannot include x, because x no longer exists.  If you try
+		//	to replace one of the variables with x, you will recieve an error.
 	}
 	
 	public void doWhileLoop()
 	{
+		int i = 0, j = 10;
+		
 		/*
-		 * 
+		 * 					********************
+		 * 					***DO WHILE LOOPS***
+		 * 					********************
+		 * 			A DO WHILE loop is essentially the same as a WHILE loop, with one
+		 * 		key difference; a DO WHILE loop will run at least once, guaranteed, even
+		 * 		if the boolean expression is false.  The syntax is different as well,
+		 * 		in that the keyword DO appears before the statement, and the WHILE
+		 * 		with the boolean expression comes after.
 		 */
 		
+		//	This would function the same as it would a normal WHILE loop...
+		do
+		{
+			System.out.printf("i = %d, j = %d\n", i++, j);
+		}while(i < j);
 		
+		//	...however, this is what would happen if we run it again, now
+		//	that the variable i has been set to 10.  First, we'll make some
+		//	space on the console so that we can see more clearly where this
+		//	loop begins...
+		System.out.println("\n\n");
+		//	...and no an identical DO WHILE loop, simply copy/pasted from above.
+		do
+		{
+			System.out.printf("i = %d, j = %d\n", i++, j);
+		}while(i < j);
+		//	Even though the boolean condition is FALSE, it ran once anyways.  Let's
+		//	do that one more time...
+		
+		System.out.println("\n\n");
+		do
+		{
+			System.out.printf("i = %d, j = %d\n", i++, j);
+		}while(i < j);
+		//	Because it will always run at least once, i is now 12.  It's important to
+		//	note that this is because we used 'i++' and not '++i'.
+		System.out.printf("\n\ni = %d\n", i);
 	}
 }
 
