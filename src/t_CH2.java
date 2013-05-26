@@ -8,10 +8,57 @@ import java.util.Scanner;
 
 public class t_CH2
 {
-	//Class scope variable.  Scope will be covered in greater depth later.
 	Scanner in = new Scanner(System.in);
 	
-	public void math()
+	//	Method to select the subject.
+	public short selector()
+	{
+		boolean cont = true;
+		short select = -1;
+		
+		while(cont)
+		{
+			switch(select)
+			{
+				case -1:
+				{
+					System.out.println("\nWhich subject would you like to run?");
+					System.out.println("1 - Basic Math and Incrementals");
+					System.out.println("2 - If Statements and Operators");
+					System.out.println("0 - Chose Another Chapter");
+					select = in.nextShort();
+					break;
+				}
+				case 0:
+				{
+					cont = false;
+					break;
+				}
+				case 1:
+				{
+					math();
+					select = -1;
+					break;
+				}
+				case 2:
+				{
+					ifStatement();
+					select = -1;
+					break;
+				}
+				default:
+				{
+					System.out.println("\nIncorrect input!");
+					select = -1;
+					break;
+				}
+			}
+		}
+		
+		return -1;
+	}
+	
+	private void math()
 	{
 		//Function (sometimes called method, they're the same thing) variables
 		int intOne, intTwo, intAdd, num = 0;
@@ -71,7 +118,7 @@ public class t_CH2
 		//	before the expression.
 	}
 	
-	public void ifStatement()
+	private void ifStatement()
 	{
 		//Function variables
 		int numOne, numTwo, value = 10;

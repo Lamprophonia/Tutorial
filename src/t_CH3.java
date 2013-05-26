@@ -11,11 +11,71 @@ import java.util.Scanner;
 
 public class t_CH3
 {
-	public void switchStatement()
+	Scanner in = new Scanner(System.in);
+	//	Method to select the subject.
+	public short selector()
+	{
+		boolean cont = true;
+		short select = -1;
+		
+		while(cont)
+		{
+			switch(select)
+			{
+				case -1:
+				{
+					System.out.println("\nWhich subject would you like to run?");
+					System.out.println("1 - Switch Statements");
+					System.out.println("2 - While Loops");
+					System.out.println("3 - For Loops");
+					System.out.println("4 - Do While Loops");
+					System.out.println("0 - Chose Another Chapter");
+					select = in.nextShort();
+					break;
+				}
+				case 0:
+				{
+					cont = false;
+					break;
+				}
+				case 1:
+				{
+					switchStatement();
+					select = -1;
+					break;
+				}
+				case 2:
+				{
+					whileLoop();
+					select = -1;
+					break;
+				}
+				case 3:
+				{
+					forLoop();
+					break;
+				}
+				case 4:
+				{
+					doWhileLoop();
+					break;
+				}
+				default:
+				{
+					System.out.println("\nIncorrect input!");
+					select = -1;
+					break;
+				}
+			}
+		}
+		
+		return -1;
+	}
+	
+	private void switchStatement()
 	{
 		//	Function variables
 		int choice;
-		Scanner in = new Scanner(System.in);
 		
 		/*
 		 * 					**********************
@@ -101,7 +161,7 @@ public class t_CH3
 		}
 	}
 	
-	public void whileLoop()
+	private void whileLoop()
 	{
 		//	Function variables
 		int x = 0, num = 10, i = 0;
@@ -152,23 +212,46 @@ public class t_CH3
 		//	then you have a good understanding of how loops work.
 		x = 0;
 		test = true;
-		System.out.printf("\nOutside of the complex loop, x = %d and y = %d.\n", x, i);
+		System.out.printf("\nOutside of the complex loop, x = %d and i = %d.\n", x, i);
 		//		Here is a good example of a situation where it is important to pay attention
 		//	to the difference between the EQUALS operator (==) and the assignment operator (=).
 		while(check == false)
 		{
 			if(x >= num)
 			{
-				
+				System.out.printf("x = %d\n", x);
+				check = true;
 			}
 			else
 			{
-				
+				System.out.printf("x = %d\n", x++);
+				if(x < num/2)
+				{
+					System.out.printf("x = %d, not halfway there!\n", x);
+				}else if(x == num/2)
+				{
+					System.out.printf("x = %d, halfway there!\n", x);
+					while(test != false)
+					{
+						if(i >= x)
+						{
+							System.out.printf("i = %d, go back to x!\n", i);
+							test = false;
+						}else
+						{
+							System.out.printf("i = %d\n", i++);
+						}
+					}
+				}
+				else if(x > num/2)
+				{
+					System.out.printf("x = %d, almost done!\n", x);
+				}
 			}
 		}
 	}
 	
-	public void forLoop()
+	private void forLoop()
 	{
 		//	Variables in the function scope (can be used by everything within the function)
 		int i, j = 0, k = 10;
@@ -231,7 +314,7 @@ public class t_CH3
 		//	to replace one of the variables with x, you will recieve an error.
 	}
 	
-	public void doWhileLoop()
+	private void doWhileLoop()
 	{
 		int i = 0, j = 10;
 		

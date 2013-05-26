@@ -1,11 +1,12 @@
 /*
- * Chapter 5:
- * 		Math class methods, random numbers, and scope
+ * Chapter 6:
+ * 		Simple arrays, more FOR loops (multiple variables, enhanced FOR loop),
+ * 	BREAK statement and CONTINUE statement
  */
 
 import java.util.Scanner;
 
-public class t_CH5
+public class t_CH6
 {
 	Scanner in = new Scanner(System.in);
 	
@@ -68,24 +69,4 @@ public class t_CH5
 	}
 }
 
-/*
-
-						   "As Soon as Fred Gets Out of Bed"
-
-							As soon as Fred gets out of bed,
-							his underwear goes on his head.
-							His mother laughs, "Don't put it there,
-							a head's no place for underwear!"
-							But near his ears, above his brains,
-							is where Fred's underwear remains.
-							
-							At night when Fred goes back to bed,
-							he deftly plucks it off his head.
-							His mother switches off the light
-							and softly croons, "Good night! Good night!"
-							And then, for reasons no one knows,
-							Fred's underwear goes on his toes. 
-							
-											-Jack Pretlutsky
-
- */
+//poem

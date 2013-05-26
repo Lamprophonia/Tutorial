@@ -1,6 +1,7 @@
 /*
  * 		Author:			Brian Marini
  * 		Start Date:		5/18/2013
+ * 		GitHub:			https://github.com/Lamprophonia/Tutorial
  * 
  * 			Main file for my attempt at creating a beginer's guide
  * 		to Java.  Classes are thought of as 'chapters', and each one
@@ -15,15 +16,18 @@ public class t_Main
 	public static void main(String args[])
 	{
 		//	Variables in the scope of main()
-		int choice = -1, subj;
+		short choice = -1;
 		boolean end = false;
+		Scanner in = new Scanner(System.in);
 		
-		//	Calling each of the the Chapter classes
+/*
+ * 						~~~>   CHAPTER 4   <~~~
+ * 			This is the syntax for creating an object of a class.
+ */
 		t_CH1 A = new t_CH1();
 		t_CH2 B = new t_CH2();
 		t_CH3 C = new t_CH3();
-		
-		Scanner in = new Scanner(System.in);
+		t_CH4 D = new t_CH4();
 		
 		/*
 		 * 		This WHILE loop contains a SWITCH statement that, together, will
@@ -43,150 +47,48 @@ public class t_Main
 				}
 				case 1:
 				{
-					subj = 0;
-					System.out.println("\nWhich subject would you like to run?");
-					System.out.println("1 - Basic Output and Variables");
-					System.out.println("2 - User Input");
-					System.out.println("0 - Chose Another Chapter");
-					System.out.print("Please enter a numerical choice: ");
-					subj = in.nextInt();
-					
-					switch(subj)
-					{
-						case 0:
-						{
-							choice = -1;
-							break;
-						}
-						case 1:
-						{
-							System.out.println("\nRunning A.output() method from t_CH1 class...\n");
-							A.output();
-							break;
-						}
-						case 2:
-						{
-							System.out.println("\nRunning A.inputTest() method from t_CH1 class...\n");
-							A.inputTest();
-							break;
-						}
-						default:
-						{
-							System.out.println("\nIncorrect input; closing program.");
-							break;
-						}
-					}
+					choice = A.selector();
 					break;
 				}
 				case 2:
 				{
-					subj = 0;
-					System.out.println("\nWhich subject would you like to run?");
-					System.out.println("1 - Basic Math and Incrementals");
-					System.out.println("2 - If Statements and Operators");
-					System.out.println("0 - Chose Another Chapter");
-					System.out.print("Please enter a numerical choice: ");
-					subj = in.nextInt();
-					
-					switch(subj)
-					{
-						case 0:
-						{
-							choice = -1;
-							break;
-						}
-						case 1:
-						{
-							System.out.println("\nRunning B.math() method from t_CH2 class...\n");
-							B.math();
-							break;
-						}
-						case 2:
-						{
-							System.out.println("\nRunning B.ifStatement() method from t_CH2 class...\n");
-							B.ifStatement();
-							break;
-						}
-						default:
-						{
-							System.out.println("\nIncorrect input; closing program.");
-							break;
-						}
-					}
+					choice = B.selector();
 					break;
 				}
 				case 3:
 				{
-					subj = 0;
-					System.out.println("\nWhich subject would you like to run?");
-					System.out.println("1 - Switch Statements");
-					System.out.println("2 - While Loops");
-					System.out.println("3 - For Loops");
-					System.out.println("4 - Do While Loops");
-					System.out.println("0 - Chose Another Chapter");
-					System.out.print("Please enter a numerical choice: ");
-					subj = in.nextInt();
-					
-					switch(subj)
-					{
-						case 0:
-						{
-							choice = -1;
-							break;
-						}
-						case 1:
-						{
-							System.out.println("\nRunning C.switchStatement() method from t_CH3 class...\n");
-							C.switchStatement();
-							break;
-						}
-						case 2:
-						{
-							System.out.println("\nRunning C.whileLoop() method from t_CH3 class...\n");
-							C.whileLoop();
-							break;
-						}
-						case 3:
-						{
-							System.out.println("\nRunning C.forLoop() method from t_CH3 class...\n");
-							C.forLoop();
-							break;
-						}
-						case 4:
-						{
-							System.out.println("\nRunning C.doWhileLoop() method from t_CH3 class...\n");
-							C.doWhileLoop();
-							break;
-						}
-						default:
-						{
-							System.out.println("\nIncorrect input; closing program.");
-							break;
-						}
-					}
+					choice = C.selector();
+					break;
+				}
+				case 4:
+				{
+/*
+ * 							~~~>   CHAPTER 4   <~~~
+ * 						Here is an example of calling a method within a class
+ * 					using the dot separator (.), and in this case, accepting
+ * 					a return value.  Note that the variable type for 'choice'
+ * 					must match the return value of the 'selector()' method.
+ */
+					choice = D.selector();
 					break;
 				}
 				case -1:
 				{
 					System.out.println("\nWhich Chapter would you like to run?");
-					System.out.println("Currently available: CH1 - CH3");
+					System.out.println("Currently available: CH1 - CH4");
 					System.out.print("Or type 0 to exit the program: ");
-					choice = in.nextInt();
+					choice = in.nextShort();
 					break;
 				}
 				default:
 				{
-					//		Throws an error message to the user then prompts them again
-					//	to chose a chapter.  This will keep the WHILE loop running
-					//	until a legitimate chapter has ben selected.
 					System.out.println("Incorrect Value!");
-					System.out.println("Which Chapter would you like to run?");
-					System.out.print("Currently available: CH1 - CH3: ");
-					choice = in.nextInt();
+					choice = -1;
 					break;
 				}
 			}
 		}
+	in.close();
 	}
 }
 

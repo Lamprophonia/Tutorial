@@ -18,6 +18,60 @@ import java.util.Scanner;
 
 public class t_CH1
 {
+	//Declare a new scanner with "System.in" as the arguement.
+	Scanner in = new Scanner(System.in);
+	
+//		Method to select the subject.  Don't worry if you don't understand
+//	what's in here yet.  You can study it later, once you've learned the
+//	relevant code.  There will be a 'selector' method in every chapter,
+//	so feel free to study them as you go.
+public short selector()
+{
+	boolean cont = true;
+	short select = -1;
+	
+	while(cont)
+	{
+		switch(select)
+		{
+			case -1:
+			{
+				System.out.println("\nWhich subject would you like to run?");
+				System.out.println("1 - Basic Output and Variables");
+				System.out.println("2 - User Input");
+				System.out.println("0 - Chose Another Chapter");
+				select = in.nextShort();
+				break;
+			}
+			case 0:
+			{
+				cont = false;
+				break;
+			}
+			case 1:
+			{
+				output();
+				select = -1;
+				break;
+			}
+			case 2:
+			{
+				inputTest();
+				select = -1;
+				break;
+			}
+			default:
+			{
+				System.out.println("\nIncorrect input!");
+				select = -1;
+				break;
+			}
+		}
+	}
+	
+	return -1;
+}
+	
 /*
  * 							***************************
  * 							***VARIABLE DECLARATIONS***
@@ -118,7 +172,7 @@ public class t_CH1
 	 */
 	char letter = 'n', chMin = '\u0000', chMax = '\uffff';
 	
-	public void output()
+	private void output()
 	{
 		/*
 		 * 					***************************
@@ -188,10 +242,7 @@ public class t_CH1
 		//Note that some values are rounded
 	}
 	
-	//Declare a new scanner with "System.in" as the arguement.
-	Scanner in = new Scanner(System.in);
-	
-	public void inputTest()
+	private void inputTest()
 	{
 		int input;
 		String strInput;
