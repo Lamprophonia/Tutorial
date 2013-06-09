@@ -1,16 +1,19 @@
-/*
+import java.util.Scanner;
+
+/**
  * Chapter 2:
  * 		Basic math operators, incrementals, logical operators, IF statement, ELSE statement,
  * 		ELSE IF statement
  */
-
-import java.util.Scanner;
-
 public class t_CH2
 {
 	Scanner in = new Scanner(System.in);
 	
-	//	Method to select the subject.
+	/**
+	 * Method to select the subject.
+	 * 
+	 * @return -1 to Main, which will return the user to the menu page.
+	 */
 	public short selector()
 	{
 		boolean cont = true;

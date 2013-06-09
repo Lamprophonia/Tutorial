@@ -10,7 +10,11 @@ public class t_CH6
 {
 	Scanner in = new Scanner(System.in);
 	
-	//	Method to select the subject.
+	/**
+	 * Method to select the subject.
+	 * 
+	 * @return -1 to Main, which will return the user to the menu page.
+	 */
 	public short selector()
 	{
 		boolean cont = true;

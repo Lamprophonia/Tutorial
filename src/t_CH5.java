@@ -1,15 +1,19 @@
-/*
+import java.util.Scanner;
+import java.util.Random;
+
+/**
  * Chapter 5:
  * 		Math class methods, random numbers, and scope
  */
-
-import java.util.Scanner;
-
 public class t_CH5
 {
 	Scanner in = new Scanner(System.in);
 	
-	//	Method to select the subject.
+	/**
+	 * Method to select the subject.
+	 * 
+	 * @return -1 to Main, which will return the user to the menu page.
+	 */
 	public short selector()
 	{
 		boolean cont = true;
@@ -22,8 +26,8 @@ public class t_CH5
 				case -1:
 				{
 					System.out.println("\nWhich subject would you like to run?");
-					System.out.println("1 - Class 1");
-					System.out.println("2 - Class 2");
+					System.out.println("1 - Math Class");
+					System.out.println("2 - Random Numbers");
 					System.out.println("0 - Chose Another Chapter");
 					select = in.nextShort();
 					break;
@@ -35,13 +39,13 @@ public class t_CH5
 				}
 				case 1:
 				{
-					class1();
+					mathClass();
 					select = -1;
 					break;
 				}
 				case 2:
 				{
-					class2();
+					rand();
 					select = -1;
 					break;
 				}
@@ -57,13 +61,41 @@ public class t_CH5
 		return -1;
 	}
 	
-	private void class1()
+	/**
+	 * 
+	 */
+	private void mathClass()
 	{
+		int big = 15, small = 3;
 		
+		System.out.println("The value of e, common in calculus, is " + Math.E);
+		
+		System.out.println("The value of pi, common in trigonometry, is " + Math.PI);
+		
+		System.out.println("The variable 'big' raised to the power of 'small' is " + Math.pow(big, small));
+		
+		System.out.println("The absolute value of -26.7 is " + Math.abs(-26.7));
+		
+		System.out.println("7.1 rounded up is " + Math.ceil(7.1));
+		
+		System.out.println("9.9 rounded down is " + Math.floor(9.9));
+		
+		System.out.println("The larger of the two variables 'big' and 'small' is " + Math.max(big, small));
+		
+		System.out.println("The smaller of the two variables 'big' and 'small' is " + Math.min(big, small));
+		
+		System.out.println("The square root of 9 is " + Math.sqrt(9));
+		
+		System.out.println("The square root of 10 is " + Math.sqrt(10));
 	}
 	
-	private void class2()
+	/**
+	 * 
+	 */
+	private void rand()
 	{
+		Random dice = new Random();
+		
 		
 	}
 }

@@ -1,13 +1,7 @@
-/*
- * Chapter 4:
- * 		Classes, methods, objects, and constructors
- */
 import java.util.Scanner;
 
-/*
- * 							***********************************
- * 							***CLASSES, METHODS, AND OBJECTS***
- * 							***********************************
+/**
+ * 					***CLASSES, METHODS, AND OBJECTS***
  * 		This will be a unique subject for us, because we've been using
  * 	classes this whole time without even knowing it!  A class can be thought
  * 	of as a new "page" of the program.  In this program, each chapter is it's
@@ -31,12 +25,15 @@ import java.util.Scanner;
  *	these concepts a lot, then you will come to see and understand them and their
  *	value to programming.
  */
-
 public class t_CH4
 {
 	Scanner in = new Scanner(System.in);
 	
-	//	Method to select the subject.
+	/**
+	 * Method to select the subject.
+	 * 
+	 * @return -1 to Main, which will return the user to the menu page.
+	 */
 	public short selector()
 	{
 		boolean cont = true;
@@ -84,6 +81,9 @@ public class t_CH4
 		return -1;
 	}
 	
+	/**
+	 * 
+	 */
 	private void makeFishies()
 	{
 		short i = -1;
@@ -164,7 +164,7 @@ public class t_CH4
 		}
 	}
 	
-	/*
+	/**
 	 *		For this class, we will use a more literal interpretation
 	 *	of classes and methods, and show some examples of other
 	 *	functionalities of them.

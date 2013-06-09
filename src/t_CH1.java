@@ -1,4 +1,7 @@
-/*
+//java.util.Scanner is needed for user input
+import java.util.Scanner;
+
+/**
  * Chapter 1:
  * 		Fundamentals of variables, math operators, user input
  * 
@@ -12,19 +15,19 @@
  * 				organization that develops global standards in a broad range of
  * 				industries.  Java uses these standards.
  */
-
-//java.util.Scanner is needed for user input
-import java.util.Scanner;
-
 public class t_CH1
 {
 	//Declare a new scanner with "System.in" as the arguement.
 	Scanner in = new Scanner(System.in);
 	
-//		Method to select the subject.  Don't worry if you don't understand
-//	what's in here yet.  You can study it later, once you've learned the
-//	relevant code.  There will be a 'selector' method in every chapter,
-//	so feel free to study them as you go.
+/**
+* 		Method to select the subject.  Don't worry if you don't understand
+* 	what's in here yet.  You can study it later, once you've learned the
+* 	relevant code.  There will be a 'selector' method in every chapter,
+* 	so feel free to study them as you go.
+* 
+* @return -1 to Main, which will return the user to the menu page.
+*/
 public short selector()
 {
 	boolean cont = true;
@@ -172,42 +175,41 @@ public short selector()
 	 */
 	char letter = 'n', chMin = '\u0000', chMax = '\uffff';
 	
+/*
+ * 					***************************
+ * 					***BASIC OUTPUT PRINTING***
+ * 					***************************
+ * 		-NOTES-
+ * 			For the purposes of this chapter, assume that all of
+ * 		the different ways to print to the console must go through
+ * 		the 'System.out' method.
+ * 
+ * 			-Non-Format Specifiers-
+ * 		\n			= New line
+ * 		\			= Treats next item as a character (called a literal)
+ * 		+			= Concatinate
+ * 		
+ * 			-Format Specifiers-
+ * 			More useful than string concatination.  Any marked with a capitalized
+ * 		letter in parenthesis have a capitalization option; using the capitalized
+ * 		letter instead of the lower case letter will automaticall invoke a method
+ * 		that will make the argument uppercase if applicable [out.toUpperCase()].
+ * 
+ * 		%d			= Integer
+ * 		%b(B)		= Boolean; result will be true in all cases except if
+ * 					  the argument is 'null'
+ * 		%s(S)		= String
+ * 		%c(C)		= Char
+ * 		%o			= Octal integer
+ * 		%x(X)		= Hex integer
+ * 		%e(E)		= Floating point decimal number in scientific notation
+ * 		%f			= Floating point decimal number
+ * 		%g(G)		= Floating point using scientific notation OR decimal point,
+ * 					  depending on the precision and value after rounding
+ * 		%			= Literal
+ */
 	private void output()
 	{
-		/*
-		 * 					***************************
-		 * 					***BASIC OUTPUT PRINTING***
-		 * 					***************************
-		 * 		-NOTES-
-		 * 			For the purposes of this chapter, assume that all of
-		 * 		the different ways to print to the console must go through
-		 * 		the 'System.out' method.
-		 * 
-		 * 			-Non-Format Specifiers-
-		 * 		\n			= New line
-		 * 		\			= Treats next item as a character (called a literal)
-		 * 		+			= Concatinate
-		 * 		
-		 * 			-Format Specifiers-
-		 * 			More useful than string concatination.  Any marked with a capitalized
-		 * 		letter in parenthesis have a capitalization option; using the capitalized
-		 * 		letter instead of the lower case letter will automaticall invoke a method
-		 * 		that will make the argument uppercase if applicable [out.toUpperCase()].
-		 * 
-		 * 		%d			= Integer
-		 * 		%b(B)		= Boolean; result will be true in all cases except if
-		 * 					  the argument is 'null'
-		 * 		%s(S)		= String
-		 * 		%c(C)		= Char
-		 * 		%o			= Octal integer
-		 * 		%x(X)		= Hex integer
-		 * 		%e(E)		= Floating point decimal number in scientific notation
-		 * 		%f			= Floating point decimal number
-		 * 		%g(G)		= Floating point using scientific notation OR decimal point,
-		 * 					  depending on the precision and value after rounding
-		 * 		%			= Literal
-		 */
-	
 		/*
 		 * 		-print("xyz")
 		 * 			This will print out anything typed between the quotation marks.
@@ -242,22 +244,21 @@ public short selector()
 		//Note that some values are rounded
 	}
 	
+	/*
+	 * 					****************
+	 *					***USER INPUT***
+	 *					****************
+	 *		-NOTES-
+	 *			It's good practice to always prompt the user for the input,
+	 *		so that they are never confused and know what is expected of them.
+	 *		java.util.Scanner must be imported (as done at the top), and a
+	 *		new Scanner object must be declared (as seen just prior to the
+	 *		'inputTest()' function.
+	 */
 	private void inputTest()
 	{
 		int input;
 		String strInput;
-		
-		/*
-		 * 					****************
-		 *					***USER INPUT***
-		 *					****************
-		 *		-NOTES-
-		 *			It's good practice to always prompt the user for the input,
-		 *		so that they are never confused and know what is expected of them.
-		 *		java.util.Scanner must be imported (as done at the top), and a
-		 *		new Scanner object must be declared (as seen just prior to the
-		 *		'inputTest()' function.
-		 */
 		
 		/*
 		 * 		-next()

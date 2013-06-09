@@ -1,9 +1,8 @@
-/*
- * 	Fish class for chapter 4
- */
-
 import java.util.Scanner;
 
+/**
+ * 	Fish class for chapter 4
+ */
 public class t_CH4_fish
 {
 	/*

@@ -1,7 +1,6 @@
-/*
+/**
  * 	More class examples and constructors for chapter 4
  */
-
 public class t_CH4_Classes
 {
 	private String fName, lName;
@@ -11,6 +10,14 @@ public class t_CH4_Classes
 	//	variables as arguments.  Keep in mind that the
 	//	order going in matters, so keeping your variable
 	//	names easy to understand is crucial.
+	/**
+	 * 		Here we see an example of passing multiple variables as
+	 * 	arguments.  Keep in mind that the order going in matters, so
+	 * 	keeping your variable names easy to understand is crucial.
+	 * 
+	 * @param first The first name, as given by the user.
+	 * @param second The second name, as given by the user.
+	 */
 	public void setName(String first, String second)
 	{
 		System.out.printf("In setName, current name is %s %s.\n", fName, lName);

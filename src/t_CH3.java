@@ -1,4 +1,6 @@
-/*
+import java.util.Scanner;
+
+/**
  * Chapter 3:
  * 		More statements (SWITCH), loops (WHILE, FOR, DO WHILE)
  * 
@@ -6,13 +8,14 @@
  * 			For the sake of time, we will simply assign values to any variable and not
  * 		prompt the user for input unless it matters to the lesson.
  */
-
-import java.util.Scanner;
-
 public class t_CH3
 {
 	Scanner in = new Scanner(System.in);
-	//	Method to select the subject.
+	/**
+	 * Method to select the subject.
+	 * 
+	 * @return -1 to Main, which will return the user to the menu page.
+	 */
 	public short selector()
 	{
 		boolean cont = true;

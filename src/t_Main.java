@@ -1,21 +1,18 @@
-/*
- * 		Author:			Brian Marini
- * 		Start Date:		5/18/2013
- * 		GitHub:			https://github.com/Lamprophonia/Tutorial
- * 
+import java.util.Scanner;
+
+/**
  * 			Main file for my attempt at creating a beginer's guide
  * 		to Java.  Classes are thought of as 'chapters', and each one
  * 		focuses on a specific set of material, grouped together
  * 		intuitively.  Each chapter will build on its predecessor.
+ * 
+ * 		@author 	Brian Marini <a href="mailto:brianmarini@gmail.com">brianmarini@gmail.com</a>
+ * 		@version 	0.5
  */
-
-import java.util.Scanner;
-
 public class t_Main
 {
 	public static void main(String args[])
 	{
-		//	Variables in the scope of main()
 		short choice = -1;
 		boolean end = false;
 		Scanner in = new Scanner(System.in);
@@ -28,6 +25,7 @@ public class t_Main
 		t_CH2 B = new t_CH2();
 		t_CH3 C = new t_CH3();
 		t_CH4 D = new t_CH4();
+		t_CH5 E = new t_CH5();
 		
 		/*
 		 * 		This WHILE loop contains a SWITCH statement that, together, will
@@ -35,8 +33,10 @@ public class t_Main
 		 */
 		while(end == false)
 		{
-			//		Within this SWITCH statement is a series of nested SWITCH
-			//	statements that prompt the user to chose a method, or 'lesson'.
+			/*
+			 * 		Within this SWITCH statement is a series of nested SWITCH
+			 * 	statements that prompt the user to chose a method, or 'lesson'.
+			 */
 			switch(choice)
 			{
 				case 0:
@@ -72,10 +72,15 @@ public class t_Main
 					choice = D.selector();
 					break;
 				}
+				case 5:
+				{
+					choice = E.selector();
+					break;
+				}
 				case -1:
 				{
 					System.out.println("\nWhich Chapter would you like to run?");
-					System.out.println("Currently available: CH1 - CH4");
+					System.out.println("Currently available: CH1 - CH5");
 					System.out.print("Or type 0 to exit the program: ");
 					choice = in.nextShort();
 					break;
