@@ -1,17 +1,16 @@
 import java.util.Scanner;
 
 /**
- * Chapter 6:
- * Simple arrays, more FOR loops (multiple variables, enhanced FOR loop),
- * BREAK statement and CONTINUE statement
+ * Chapter 7
+ * Subject
  * @author bmarini
  */
-public class t_CH6
+public class t_CH7
 {
 	Scanner in = new Scanner(System.in);
 	
 	/**
-	 * Method to select the subject.
+	 * Method to select your subject
 	 * @return -1 to Main, which will return the user to the menu page.
 	 */
 	public short selector()

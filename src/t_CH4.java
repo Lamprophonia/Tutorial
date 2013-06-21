@@ -24,6 +24,7 @@ import java.util.Scanner;
  *	is a tricky subject to get a complete grasp on, but if you play around with
  *	these concepts a lot, then you will come to see and understand them and their
  *	value to programming.
+ *	@author bmarini
  */
 public class t_CH4
 {

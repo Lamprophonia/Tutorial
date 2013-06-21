@@ -1,15 +1,12 @@
 /**
  * 	More class examples and constructors for chapter 4
+ *  @author bmarini
  */
 public class t_CH4_Classes
 {
 	private String fName, lName;
 	int test;
 	
-	//		Here we see an example of passing multiple
-	//	variables as arguments.  Keep in mind that the
-	//	order going in matters, so keeping your variable
-	//	names easy to understand is crucial.
 	/**
 	 * 		Here we see an example of passing multiple variables as
 	 * 	arguments.  Keep in mind that the order going in matters, so
@@ -29,7 +26,7 @@ public class t_CH4_Classes
 	public String getName()
 	{
 		System.out.printf("In getName(), returning %s %s.\n", fName, lName);
-		//		Showcasing an example of returning multiple, concatinated
+		//		Showcasing an example of returning multiple, concatenated
 		//	values.  In this case, two string variables and a space literal
 		//	to separate them.  It will put each of these together into a
 		//	single string variable at the other end, in the t_CH4.classes()
@@ -46,7 +43,7 @@ public class t_CH4_Classes
 		return sum;
 	}
 	
-	/*
+	/**
 	 * 				******************
 	 * 				***CONSTRUCTORS***
 	 * 				******************
@@ -55,11 +52,10 @@ public class t_CH4_Classes
 	 * 	will be run automatically everytime an object for this class is
 	 * 	created.  Thankfully, you can create more than one constructor,
 	 * 	so that each can be called depending on the values passed into
-	 * 	it when the object is created.  For example;
+	 * 	it when the object is created.  For example, this constructor
+	 * 	will be called when an object is created with no arguments passed
+	 *  into it.
 	 */
-	
-	//		This constructor will be called when an object is created with
-	//	no arguments passed into it.
 	public t_CH4_Classes()
 	{
 		System.out.println("In constructor, no arguments...\n");

@@ -4,6 +4,7 @@ import java.util.Random;
 /**
  * Chapter 5:
  * 		Math class methods, random numbers, and scope
+ * @author bmarini
  */
 public class t_CH5
 {

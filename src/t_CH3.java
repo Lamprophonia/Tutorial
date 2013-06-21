@@ -2,15 +2,16 @@ import java.util.Scanner;
 
 /**
  * Chapter 3:
- * 		More statements (SWITCH), loops (WHILE, FOR, DO WHILE)
- * 
- * 		NOTES:
- * 			For the sake of time, we will simply assign values to any variable and not
- * 		prompt the user for input unless it matters to the lesson.
+ * More statements (SWITCH), loops (WHILE, FOR, DO WHILE)
+ * NOTES:
+ * For the sake of time, we will simply assign values to any variable and not
+ * prompt the user for input unless it matters to the lesson.
+ * @author bmarini
  */
 public class t_CH3
 {
 	Scanner in = new Scanner(System.in);
+	
 	/**
 	 * Method to select the subject.
 	 * 

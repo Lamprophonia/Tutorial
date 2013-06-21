@@ -14,6 +14,7 @@ import java.util.Scanner;
  * 			IEEE = Institute of Electrical and Electronics Engineers; an
  * 				organization that develops global standards in a broad range of
  * 				industries.  Java uses these standards.
+ * @author bmarini
  */
 public class t_CH1
 {

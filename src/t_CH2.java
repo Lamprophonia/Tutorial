@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 /**
  * Chapter 2:
- * 		Basic math operators, incrementals, logical operators, IF statement, ELSE statement,
- * 		ELSE IF statement
+ * Basic math operators, incrementals, logical operators, IF statement, ELSE statement,
+ * ELSE IF statement
+ * @author bmarini
  */
 public class t_CH2
 {
