@@ -26,6 +26,7 @@ public class t_Main
 		t_CH3 C = new t_CH3();
 		t_CH4 D = new t_CH4();
 		t_CH5 E = new t_CH5();
+		t_CH6 F = new t_CH6();
 		
 		/*
 		 * 		This WHILE loop contains a SWITCH statement that, together, will
@@ -77,10 +78,15 @@ public class t_Main
 					choice = E.selector();
 					break;
 				}
+				case 6:
+				{
+					choice = F.selector();
+					break;
+				}
 				case -1:
 				{
 					System.out.println("\nWhich Chapter would you like to run?");
-					System.out.println("Currently available: CH1 - CH5");
+					System.out.println("Currently available: CH1 - CH6");
 					System.out.print("Or type 0 to exit the program: ");
 					choice = in.nextShort();
 					break;

@@ -95,9 +95,102 @@ public class t_CH5
 	 */
 	private void rand()
 	{
+		//Declaring the random Object
 		Random dice = new Random();
+		int num, sum = 0, sides = 6, iter = 10, i, big = 0, winner1 = 0, winner2 = 0;
+		int greatest[] = new int[6];
 		
+		float fSum, fIter, avg;
 		
+		//	for loop that 'rolls the dice' a number of times equal to iter
+		for (i = 1; i <= iter; i++)
+		{
+			num = dice.nextInt(sides);
+			System.out.println(1 + num);
+			sum += num;
+			
+			//	switch statement adds up how many times each side of the dice it landed on
+			switch(num +1)
+			{
+			case 1:
+			{
+				greatest[0] += 1;
+				System.out.println("One added to 1");
+				break;
+			}
+			case 2:
+			{
+				greatest[1] += 1;
+				System.out.println("One added to 2");
+				break;
+			}
+			case 3:
+			{
+				greatest[2] += 1;
+				System.out.println("One added to 3");
+				break;
+			}
+			case 4:
+			{
+				greatest[3] += 1;
+				System.out.println("One added to 4");
+				break;
+			}
+			case 5:
+			{
+				greatest[4] += 1;
+				System.out.println("One added to 5");
+				break;
+			}
+			case 6:
+			{
+				greatest[5] += 1;
+				System.out.println("One added to 6");
+				break;
+			}
+			default:
+			{
+				System.out.println("NO GOOD DAWG");
+				break;
+			}
+			
+			}
+		}
+		
+		//	converts stuff to floats (for accuracy) then averages them
+		fSum = sum;
+		fIter = iter;
+		avg = (fSum / fIter);
+		System.out.println("\nThe average dice roll is: " + avg);
+		
+		//	for loop announces how many times each side of the dice was landed on...
+		for(i = 1; i <= sides; i++)
+		{
+			System.out.println("The dice landed on " + i + " " + greatest[i-1] + " Time(s)");
+			//	...then figures out which one (or two) sides landed the most.
+			if(big < greatest[i-1])
+			{
+				big = greatest[i-1];
+				System.out.println("Big is now " + big);
+				winner1 = i;
+				winner2 = 0;
+			}
+			else if(big == greatest[i-1])
+			{
+				System.out.println("We have a tie!");
+				winner2 = i;
+			}
+		}
+		
+		//	Displays which side(s) was(were) called the most.
+		if(winner1 > 0 && winner2 == 0)
+		{
+			System.out.println("\nThe number than landed the most was " + winner1);
+		}
+		else if(winner1 > 0 && winner2 > 0)
+		{
+			System.out.println("\nThe two numbers that tie for the most are " + winner1 + " and " + winner2 + ".");
+		}
 	}
 }
 
