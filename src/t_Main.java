@@ -27,6 +27,7 @@ public class t_Main
 		t_CH4 D = new t_CH4();
 		t_CH5 E = new t_CH5();
 		t_CH6 F = new t_CH6();
+		t_CH7 G = new t_CH7();
 		
 		/*
 		 * 		This WHILE loop contains a SWITCH statement that, together, will
@@ -83,10 +84,15 @@ public class t_Main
 					choice = F.selector();
 					break;
 				}
+				case 7:
+				{
+					choice = G.selector();
+					break;
+				}
 				case -1:
 				{
 					System.out.println("\nWhich Chapter would you like to run?");
-					System.out.println("Currently available: CH1 - CH6");
+					System.out.println("Currently available: CH1 - CH7");
 					System.out.print("Or type 0 to exit the program: ");
 					choice = in.nextShort();
 					break;
@@ -115,7 +121,7 @@ public class t_Main
 						Or, being lied about, don't deal in lies,
 						Or being hated don't give way to hating,
 						And yet don't look too good, nor talk too wise;
-							
+						
 						If you can dream - and not make dreams your master;
 						If you can think - and not make thoughts your aim,
 						If you can meet with Triumph and Disaster
@@ -124,7 +130,7 @@ public class t_Main
 						Twisted by knaves to make a trap for fools,
 						Or watch the things you gave your life to, broken,
 						And stoop and build'em up with worn-out tools;
-							
+						
 						If you can make one heap of all your winnings
 						And risk it on one turn of pitch-and-toss,
 						And lose, and start again at your beginnings,
