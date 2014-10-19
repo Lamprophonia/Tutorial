@@ -18,7 +18,7 @@ import java.util.Scanner;
  */
 public class t_CH1
 {
-	//Declare a new scanner with "System.in" as the arguement.
+	//Declare a new scanner with "System.in" as the argument.
 	Scanner in = new Scanner(System.in);
 	
 /**
